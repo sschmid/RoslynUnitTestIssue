@@ -18,8 +18,11 @@ public static class Helper
         if (!MSBuildLocator.IsRegistered) MSBuildLocator.RegisterDefaults();
         using var workspace = MSBuildWorkspace.Create();
 
-        var symbols = workspace
+        var project = workspace
             .OpenProjectAsync(MyProjectPath).Result
+            .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
+        
+        var symbols = project
             .GetCompilationAsync().Result
             .GetSymbolsWithName(name => true, SymbolFilter.Type)
             .OfType<INamedTypeSymbol>();
