@@ -21,7 +21,7 @@ public static class Helper
         var project = workspace
             .OpenProjectAsync(MyProjectPath).Result
             .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
-        
+
         var symbols = project
             .GetCompilationAsync().Result
             .GetSymbolsWithName(name => true, SymbolFilter.Type)

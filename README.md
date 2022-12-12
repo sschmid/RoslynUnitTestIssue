@@ -17,3 +17,5 @@ Using Roslyn to get the attributes of [MyClass.cs](https://github.com/sschmid/Ro
 `Obsolete`
 
 Why? Please help!
+
+See https://github.com/sschmid/RoslynUnitTestIssue/issues/1
