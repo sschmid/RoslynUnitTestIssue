@@ -8,10 +8,7 @@ namespace MyConsoleApp;
 
 public static class Helper
 {
-    private static readonly string MyProjectPath = Path.Combine(
-        Directory.GetCurrentDirectory(),
-        "..", "..", "..", "..", "MyClasslib", "MyClasslib.csproj"
-    );
+    private static readonly string MyProjectPath = Path.Combine(GetProjectRoot(), "MyClasslib", "MyClasslib.csproj");
 
     public static AttributeData[] GetAttributes()
     {
@@ -31,5 +28,12 @@ public static class Helper
         return symbol
             .GetAttributes()
             .ToArray();
+    }
+
+    static string GetProjectRoot()
+    {
+        var current = new DirectoryInfo(Directory.GetCurrentDirectory());
+        while (current.Name != "RoslynUnitTestIssue") current = current.Parent;
+        return current.FullName;
     }
 }
