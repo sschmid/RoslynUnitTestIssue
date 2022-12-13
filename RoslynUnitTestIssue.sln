@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAttributes", "MyAttributes\MyAttributes.csproj", "{152E4592-7766-4355-85AC-F177EE7BBA62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NspecTests", "NspecTests\NspecTests.csproj", "{001A08EE-4453-4C26-9649-AE6D83E58EF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{152E4592-7766-4355-85AC-F177EE7BBA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{152E4592-7766-4355-85AC-F177EE7BBA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{152E4592-7766-4355-85AC-F177EE7BBA62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001A08EE-4453-4C26-9649-AE6D83E58EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001A08EE-4453-4C26-9649-AE6D83E58EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001A08EE-4453-4C26-9649-AE6D83E58EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001A08EE-4453-4C26-9649-AE6D83E58EF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
